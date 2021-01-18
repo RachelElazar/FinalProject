@@ -11,5 +11,10 @@ export class WaitingsListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  links = ['/AdvancedStudy', '/StudentsList', '/WaitingsList'];
+  activeLink = this.links[0];
+  
+  addLink() {
+    this.links.push(`Link ${this.links.length + 1}`);
+  }
 }

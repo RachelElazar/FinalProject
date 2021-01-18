@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'FinalProject';
   constructor(private rout:Router) { }
   ngOnInit() {
-    this.rout.navigate(["/AdvancedStudy"])
+    this.rout.navigate(["/Home"])
   }
 }

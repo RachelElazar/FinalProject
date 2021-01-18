@@ -1,6 +1,25 @@
-<div class="menu">
-    <a class="link" routerLink="/AdvancedStudy" appChosen routerLinkActiv="active">השתלמויות</a> 
-    <a class="link" routerLink="/StudentsList" appChosen routerLinkActiv="active">משתתפים</a>
-    <a class="link"  id="current" routerLink="/WaitingsList" appChosen routerLinkActiv="active">רשימת ממתינים</a> 
-</div>
+<br>
 
+<div name="menu" class="menu">
+    <div class="example-button-row" class="logout">
+        <div class="example-flex-container">
+            <button mat-icon-button>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="menu_links">
+        <a class="menu_link" routerLink="/AdvancedStudy" appChosen routerLinkActiv="active">השתלמויות</a>
+        <a class="menu_link" routerLink="/StudentsList" appChosen routerLinkActiv="active">משתתפים</a>
+        <a class="menu_link" id="current" routerLink="/WaitingsList" appChosen routerLinkActiv="active">רשימת ממתינים</a>
+    </div>
+</div>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let link of links"
+       (click)="activeLink = link"
+       [active]="activeLink == link"> {{link}} </a>
+    <a mat-tab-link disabled>Disabled Link</a>
+  </nav>
+  <button mat-raised-button class="example-action-button" (click)="addLink()">
+    Add link
+  </button>

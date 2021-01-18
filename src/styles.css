@@ -1,8 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; width: 100%;vertical-align: top;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+*{
+    color:black;
+    direction: rtl;
+}
+.menu{
+    height:2vw;
+    width: 100%;
+    font-size: 2vw;
+    font-weight:1vw;
+    margin-bottom: 1vw;
+    box-shadow: 10px 10px 10px rgba(140,140, 140,0.1);
+    position: fixed;
+    text-align: right;
+    background-color: white;
+    padding-top: 2vw;
+    display: block;
+    color: black;
+    padding-bottom: 0.5vw;
+}
+#current{
+    border-bottom-color: #5482e6;
+    border-bottom-width: 0.vw;
+    border-bottom-style: solid;
+    color: black;
+    font-weight: bold;
+}
+.menu_links{
+    height: 100%;
+    display: inline-block;
+    width:90%;
+    padding-bottom: 0.2vw;
+}
+.logout{
+    height: 100%;
+    display: inline-table;
+    width:8%;
+}
+.menu_link{
+    font-size: 1.5vw;
+    font-weight: normal;
+    text-decoration: none;
+    margin-right: 2vw;
+    padding-bottom: 0.2vw;
+}
+:hover.menu_link{
+    color: #5482e6;
+}
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';    
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';    
 .mat-card {    
@@ -38,7 +84,7 @@ mat-card {
     
 mat-toolbar-row {    
     justify-content: space-between;    
-}    
+}   
     
 .done {    
     position: fixed;    
